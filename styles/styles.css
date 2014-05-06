@@ -1,0 +1,48 @@
+
+.container {
+	border: red solid 2px;
+	background-color: #66CDAA;
+}
+
+
+/*Header*/
+.header-box {
+	border: black solid 2px;
+}
+
+.word-study-box {
+	border: black solid 2px;
+	text-align: center;
+}
+
+
+
+
+/*This is the left side box*/
+.left-side {
+	vertical-align: left;
+	width: 50%;
+}
+
+.login {
+	border: black solid 2px;
+}
+
+.word-sorts {
+	border: black solid 2px;
+}
+
+
+
+/*This is the right side box*/
+.right-side {
+	width: 50%;
+}
+
+.activities {
+	border: black solid 2px;
+}
+
+.extra {
+	border: black solid 2px;
+}
