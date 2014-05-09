@@ -12,3 +12,10 @@ angular.module('ActivitiesApp', ['ngRoute'])
 			// contoller: 'VowelSoundsController'
 		})
 })
+
+
+
+	 // $(function() {
+		//  $( "#sortable" ).sortable();
+		//  $( "#sortable" ).disableSelection();
+	 // });

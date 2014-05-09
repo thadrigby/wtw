@@ -1,5 +1,13 @@
 <html ng-app='ActivitiesApp'>
 
+
+<!-- added from the jquery website for the sortable function -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    
+    <link rel="stylesheet" href="css/styles.css">
+
+    
+
 <div>
 	<br>
 	<br>
@@ -7,10 +15,10 @@
 	<br>
 	<br>
 
-	<p>Hello there</p>
 
-	<a href='#/alphabetize'>alphabetize</a>
-	<a href='#/vowels/sounds'>vowel sounds</a>
+
+	<a href='#/alphabetize'>Alphabetize</a>
+	<a href='#/vowels/sounds'>Vowel Sounds</a>
 
 
 	<div ng-view></div>
@@ -24,4 +32,20 @@
 <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js'></script>
 <script type="text/javascript" src='js/app.js'></script>
 <script type="text/javascript" src='js/controllers/alphabetize.js'></script>
+
+<!-- added this from the jquery website under the sortable information  -->
+
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+<!--
+<script>
+	 $(function() {
+		 $( "#sortable" ).sortable();
+		 $( "#sortable" ).disableSelection();
+	 });
+</script>
+-->
+
 </html>
