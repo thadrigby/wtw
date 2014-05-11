@@ -1,22 +1,11 @@
 
 
 <h1>Alphabetize</h1>
-
-
+  <button ng-click="shuffle(words)">Shuffle Words</button>
 <div>
 	<ul id='sortable'>
 	<!-- got this from the jquery website for the sortable function  -->
 		<li ng-repeat='word in words' class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>{{word}}</li>
-
 	</ul>
-
 </div>
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br> 
+<!-- Don't use <br> for spacing. Instead, stick your stuff in a div and use margin

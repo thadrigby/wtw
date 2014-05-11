@@ -3,7 +3,7 @@ angular.module('ActivitiesApp', ['ngRoute'])
 .config(function($routeProvider) {
 	$routeProvider
 		.when('/alphabetize', {
-			templateUrl: 'alphabetize.html',
+			templateUrl: 'alphabetize/alphabetize.html',
 			controller: 'AlphabetizeController'
 		})
 
@@ -11,11 +11,4 @@ angular.module('ActivitiesApp', ['ngRoute'])
 			templateUrl: 'vowel_sounds.html',
 			// contoller: 'VowelSoundsController'
 		})
-})
-
-
-
-	 // $(function() {
-		//  $( "#sortable" ).sortable();
-		//  $( "#sortable" ).disableSelection();
-	 // });
+});
