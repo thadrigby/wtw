@@ -8,6 +8,8 @@ angular.module('ActivitiesApp')
     };
 		$scope.shuffle($scope.words);
 
+    // Although the lines below work, eventually let's refactor them out into a directive.
+    //You never want to do jQuery DOM Manipulation type stuff in a controller.
     $( "#sortable" ).sortable();
     $( "#sortable" ).disableSelection();
 	});
