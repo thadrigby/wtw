@@ -3,7 +3,7 @@ angular.module('ActivitiesApp', ['ngRoute'])
 .config(function($routeProvider) {
 	$routeProvider
 		.when('/alphabetize', {
-			templateUrl: 'alphabetize.html',
+			templateUrl: 'alphabetize/alphabetize.html',
 			controller: 'AlphabetizeController'
 		})
 
@@ -13,9 +13,3 @@ angular.module('ActivitiesApp', ['ngRoute'])
 		})
 })
 
-
-
-	 // $(function() {
-		//  $( "#sortable" ).sortable();
-		//  $( "#sortable" ).disableSelection();
-	 // });
