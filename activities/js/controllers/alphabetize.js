@@ -31,29 +31,29 @@ angular.module('ActivitiesApp')
 
 
     
-    // when clicking on submit it will check to see it the words are in alphabetical order
-    // $scope.submit = function() {
-    // 	for (var i=0; i < $scope.words.length; i++) {
-    // 		if ($scope.words[i+1]){
-	   //  		if ($scope.words[i].charAt(0) > $scope.words[i+1].charAt(0)) {
-	   //  			alert('wrong');
-	   //  			return false;
-    // 			}
-    // 		}
-    // 	}
-    // 	alert('right');
-    // }
+   // when clicking on submit it will check to see it the words are in alphabetical order
+    $scope.submit = function() {
+    	for (var i=0; i < $scope.words.length; i++) {
+    		if ($scope.words[i+1]){
+	    		if ($scope.words[i].charAt(0) > $scope.words[i+1].charAt(0)) {
+	    			alert('wrong');
+	    			return false;
+    			}
+    		}
+    	}
+    	alert('right');
+    }
 
 
     // this is for the modal on clicking the submit button
     // $('submit').modal(options);
 
-	    $scope.submit = function() {
-	    	$('#submit').click(function() {
+	    // $scope.submit = function() {
+	    // 	$('#submit').click(function() {
 
-	    		$('#submit').modal('show');
-	    	});
-	    };
+	    // 		$('#submit').modal('show');
+	    // 	});
+	    // };
 
 
 
