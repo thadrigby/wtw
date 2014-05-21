@@ -1,4 +1,4 @@
-angular.module('ActivitiesApp', ['ngRoute'])
+angular.module('ActivitiesApp', ['ngRoute', 'ui.sortable'])
 
 .config(function($routeProvider) {
 	$routeProvider
