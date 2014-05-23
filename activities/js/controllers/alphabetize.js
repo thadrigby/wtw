@@ -40,34 +40,24 @@ angular.module('ActivitiesApp')
 	$scope.newAlphabetizedList = [];
 
 	$scope.alphabetize = function(word) {
-		alert('click is working');
-		for (var i=0; i < $scope.words.length; i++) {
-    		if ($scope.words[i+1]){
-	    		if ($scope.words[i] > $scope.words[i+1]) {
-	    			alert('wrong');
-	    			return false;
-    			}
-    		}
-    	}
-    	$scope.newAlphabetizedList.push()
+		var indexOfLowestWord;
 
+		for (var i = 0; i < $scope.words.length; i++) {
+			if (indexOfLowestWord === undefined || $scope.words[i].text < $scope.words[indexOfLowestWord].text) {
+				indexOfLowestWord = i;
+			}
+		}
+
+		if (word == $scope.words[indexOfLowestWord]) {
+			$scope.words.splice(indexOfLowestWord,1)
+			$scope.newAlphabetizedList.push(word.text)
+		} else {
+			alert('You got it wrong')
+		}
 	}
 
 
 
-    
-   // // when clicking on submit it will check to see it the words are in alphabetical order
-   //  $scope.submit = function() {
-   //  	for (var i=0; i < $scope.words.length; i++) {
-   //  		if ($scope.words[i+1]){
-	  //   		if ($scope.words[i] > $scope.words[i+1]) {
-	  //   			// alert('wrong');
-	  //   			// return false;
-   //  			}
-   //  		}
-   //  	}
-   //  	//alert('right');
-   //  }
 
     
 });
