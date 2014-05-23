@@ -1,10 +1,11 @@
-#alphabetize-word-list { 
+#randomized-word-list { 
+	border: solid black 2px;
 	list-style-type: none; 
 	margin: 0; padding: 0; 
 
 }
 
-#alphabetize-word-list li {
+#randomized-word-list li {
 	display: inline-block;
 	margin: 15px; 
 	padding: 15px; 
@@ -14,4 +15,9 @@
 	cursor: move;
 	width: 100px;
 	text-align: center;
+}
+
+#newAlphabetizedList {
+	border: black solid 2px;
+	
 }

@@ -1,73 +1,22 @@
 angular.module('ActivitiesApp')
 .controller('AlphabetizeController', function($scope) {
-	$scope.words = [
-		{
-			text: 'Cat',
-			rotation: _randomRotation(),
-			translateX: _randomRotation(),
-			translateY: _randomRotation()
-		},
-		{
-			text: 'Hat',
-			rotation: _randomRotation(),
-			translateX: _randomRotation(),
-			translateY: _randomRotation()
-		},
-		{
-			text: 'Mat',
-			rotation: _randomRotation(),
-			translateX: _randomRotation(),
-			translateY: _randomRotation()
-		},
-		{
-			text: 'Mat',
-			rotation: _randomRotation(),
-			translateX: _randomRotation(),
-			translateY: _randomRotation()
-		},
-		{
-			text: 'Mat',
-			rotation: _randomRotation(),
-			translateX: _randomRotation(),
-			translateY: _randomRotation()
-		},
-		{
-			text: 'Mat',
-			rotation: _randomRotation(),
-			translateX: _randomRotation(),
-			translateY: _randomRotation()
-		},
-		{
-			text: 'Mat',
-			rotation: _randomRotation(),
-			translateX: _randomRotation(),
-			translateY: _randomRotation()
-		},
-		{
-			text: 'Mat',
-			rotation: _randomRotation(),
-			translateX: _randomRotation(),
-			translateY: _randomRotation()
-		},
-		{
-			text: 'Mat',
-			rotation: _randomRotation(),
-			translateX: _randomRotation(),
-			translateY: _randomRotation()
-		},
-		{
-			text: 'Mat',
-			rotation: _randomRotation(),
-			translateX: _randomRotation(),
-			translateY: _randomRotation()
-		},
-		{
-			text: 'Mat',
-			rotation: _randomRotation(),
-			translateX: _randomRotation(),
-			translateY: _randomRotation()
-		},
-	];
+	var randomRotation = function _randomRotation() {
+    		return Math.floor(Math.random() * 40 - 20);
+    	},
+    wordSeeds = ['Bat', 'Cat', 'Fat', 'Hat', 'Mat', 'Nat', 'Pat', 'Rat', 'Sat', 'Vat'];
+
+	$scope.words = [];
+
+	var i = wordSeeds.length;
+
+	while (i--) {
+		$scope.words.push({
+			text: wordSeeds[i],
+			rotation: randomRotation(),
+			translateX: randomRotation(),
+			translateY: randomRotation()
+		});		
+	}
 
 	$scope.wordStyle = function(word) {
 		return {
@@ -82,10 +31,17 @@ angular.module('ActivitiesApp')
     };
 	
 	$scope.shuffle($scope.words);
-    
-   // when clicking on submit it will check to see it the words are in alphabetical order
-    $scope.submit = function() {
-    	for (var i=0; i < $scope.words.length; i++) {
+
+
+
+	// NEW ALPHABETIZED LIST
+	// this is the where the words will go once they have been clicked in alphabetical
+	// order.  
+	$scope.newAlphabetizedList = [];
+
+	$scope.alphabetize = function(word) {
+		alert('click is working');
+		for (var i=0; i < $scope.words.length; i++) {
     		if ($scope.words[i+1]){
 	    		if ($scope.words[i] > $scope.words[i+1]) {
 	    			alert('wrong');
@@ -93,10 +49,25 @@ angular.module('ActivitiesApp')
     			}
     		}
     	}
-    	alert('right');
-    }
+    	$scope.newAlphabetizedList.push()
 
-    function _randomRotation() {
-    	return Math.floor(Math.random() * 40 - 20);
-    }
+	}
+
+
+
+    
+   // // when clicking on submit it will check to see it the words are in alphabetical order
+   //  $scope.submit = function() {
+   //  	for (var i=0; i < $scope.words.length; i++) {
+   //  		if ($scope.words[i+1]){
+	  //   		if ($scope.words[i] > $scope.words[i+1]) {
+	  //   			// alert('wrong');
+	  //   			// return false;
+   //  			}
+   //  		}
+   //  	}
+   //  	//alert('right');
+   //  }
+
+    
 });
