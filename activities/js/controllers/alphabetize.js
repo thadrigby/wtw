@@ -24,6 +24,8 @@ angular.module('ActivitiesApp')
 		}
 	}
 
+
+
     $scope.shuffle = function(o){ //v1.0
         for(var j, x, i = o.length; i; j = Math.floor(Math.random()
            * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -39,6 +41,16 @@ angular.module('ActivitiesApp')
 	// order.  
 	$scope.newAlphabetizedList = [];
 
+	$scope.shake = function(word) {
+		jquerySelector = "li:contains('" + word.text + "')"		
+			$( jquerySelector ).addClass( "animated shake" );
+		
+		var delay = setTimeout(function(){
+	        $(jquerySelector).removeClass("animated shake");
+	     }, 800)
+	
+	}
+
 	$scope.alphabetize = function(word) {
 		var indexOfLowestWord;
 
@@ -52,9 +64,12 @@ angular.module('ActivitiesApp')
 			$scope.words.splice(indexOfLowestWord,1)
 			$scope.newAlphabetizedList.push(word.text)
 		} else {
-			alert('You got it wrong')
-		}
+			//alert('You got it wrong')
+			//$scope.shake(word)
+			$scope.shake(word)
+		} 
 	}
+
 
 
 

@@ -2,6 +2,7 @@
 	border: solid black 2px;
 	list-style-type: none; 
 	margin: 0; padding: 0; 
+	height: 200px;
 
 }
 
@@ -19,5 +20,6 @@
 
 #newAlphabetizedList {
 	border: black solid 2px;
+	height: 200px;
 	
 }

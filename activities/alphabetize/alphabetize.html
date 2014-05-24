@@ -11,8 +11,8 @@
 	</div>
 
 
-	<div class="col-md-9">
-		<ul id='randomized-word-list' >
+	<div class="col-md-9" id='randomized-word-list'>
+		<ul>
 		<!-- got this from the jquery website for the sortable function  -->
 			<li class='word-to-alphabetize' ng-click='alphabetize(word)' ng-repeat='word in words' ng-style="wordStyle(word)">{{word.text}}</li>
 
@@ -29,7 +29,7 @@
 	<!-- Small modal -->
 
 
-		<button class="btn btn-primary" data-toggle="modal" data-target="#submit" ng-click='submit()'>Submit</button>
+	<!-- 	<button class="btn btn-primary" data-toggle="modal" data-target="#submit" ng-click='submit()'>Submit</button>
 
 		<div class="modal fade" id='submit' role='dialog'>
 		  <div class="modal-dialog">
@@ -43,7 +43,7 @@
 		    </div>
 		  </div>
 		</div>
-
+ -->
 
 
 
@@ -52,4 +52,4 @@
 
 <br>
 <br>
-{{words}}
+
