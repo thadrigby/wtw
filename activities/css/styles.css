@@ -23,3 +23,14 @@
 	height: 200px;
 	
 }
+
+#activity-options {
+	text-align: right;
+	border: black solid 2px;
+	display: inline-block;
+}
+
+#home-button {
+	border: black solid 2px;
+	display: inline-block;
+}

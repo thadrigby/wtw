@@ -34,11 +34,11 @@
     <div class='container'> 
 
       <!-- top div that holds the words study box-->
-      <div class='header-box'>
+      <div class='header'>
         <br>
-        <div class='word-study-box'>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhb9HLXzbm6QB_JtCvlYyJD4XzDwHH6OA0rQOFVDhHniPelSVAg"/>
-        </div>
+          <div class='word-study-box'>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhb9HLXzbm6QB_JtCvlYyJD4XzDwHH6OA0rQOFVDhHniPelSVAg"/>
+          </div>
         </br>
       </div>
 
@@ -46,12 +46,12 @@
       <br>
 
 
-      <div class="col-md-6" class='left-side'>
+      <div class="col-md-6" id='left-side'>
 
         <!-- Login  -->
 
-        <div class='login'>
-          <button type="button" class="btn btn-default">Login</button>
+        <div class='home-page-options' id='login'>
+          <a>Login</a>
         </div>
 
         <br>
@@ -60,8 +60,8 @@
 
         <!-- Current word sorts, and adding new word sorts -->
 
-        <div class='word-sorts'>
-          <a type="button" class="btn btn-default" href="wordSorts/wordSorts.html">Word Sorts</a>
+        <div class='home-page-options' id='word-sorts'>
+          <a href="wordSorts/wordSorts.html">Word Sorts</a>
         </div>
 
         <br>
@@ -71,19 +71,24 @@
 
 
 
-      <div class="col-md-6" class='right-side'>  
+      <div class="col-md-6" id='right-side'>  
 
         <!-- List of activities for students based off of the sort list -->
 
-        <div class='activities'>
-          <a type="button" class="btn btn-default" href="/activities">Activities</a>
+        <div class='home-page-options' id='activities'>
+          <!-- <div id='home-page-images' >
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSJgcUqOxXN7xKTEOgYRL46IW_kjUQCYI6CJ9fB1CXHe0zxgQNK">
+          </div> -->
+          <div> 
+            <a href="/activities">Activities</a>
+          </div>
         </div>
 
         <br>
         <br>
 
-        <div class='extra'>
-          <button type="button" class="btn btn-default">Extra Stuff</button>
+        <div class='home-page-options' id='extra'>
+          <a>Extra Stuff</a>
         </div>
 
         <br>

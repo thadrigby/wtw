@@ -14,23 +14,27 @@
 
     <body>
 
-		<div>
-			<br>
-			<br>
-			<a class="btn btn-default" href="../index.html" role="button">Home</a>
-			<br>
-			<br>
+    	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div>
+					<div id='home-button'>
+						<a class="btn btn-default" href="../index.html" role="button">Home</a>
+					</div>
+
+					<div id='activity-options'>	
+						<a type="button" class="btn btn-primary" href='#/alphabetize'>Alphabetize</a>
+						<a class='btn btn-primary' href='#/vowels/sounds'>Vowel Sounds</a>
+					</div>	
+				</div>
+			</div>
+		</nav>
+
+		<br>
+		<br>
+		<br>
+		<div ng-view></div>
 
 
-
-			<a type="button" class="btn btn-primary" href='#/alphabetize'>Alphabetize</a>
-			<a class='btn btn-primary' href='#/vowels/sounds'>Vowel Sounds</a>
-
-
-			<div ng-view></div>
-
-
-		</div>
 
 
 		<script src="//code.jquery.com/jquery-1.10.2.js"></script>

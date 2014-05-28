@@ -2,48 +2,27 @@
 
 <h1>Alphabetize</h1>
 
-<div>
 
-	<div class="col-md-3" id='newAlphabetizedList'>
-		<ul>
-			<li ng-repeat='word in newAlphabetizedList'>{{word}}</li>
-		</ul>
-	</div>
+		<div>
 
+			<div class="col-md-3" id='newAlphabetizedList'>
+				<ul>
+					<li ng-repeat='word in newAlphabetizedList'>{{word}}</li>
+				</ul>
+			</div>
 
-	<div class="col-md-9" id='randomized-word-list'>
-		<ul>
-		<!-- got this from the jquery website for the sortable function  -->
-			<li class='word-to-alphabetize' ng-click='alphabetize(word)' ng-repeat='word in words' ng-style="wordStyle(word)">{{word.text}}</li>
+			
+			<div class="col-md-9" id='randomized-word-list'>
+				<ul>
+				<!-- got this from the jquery website for the sortable function  -->
+					<li class='word-to-alphabetize' ng-click='alphabetize(word)' ng-repeat='word in words' ng-style="wordStyle(word)">{{word.text}}</li>
 
-		</ul>
+				</ul>
 
-	</div>
-
-
-</div>
-
-	<!-- <button type="button" class='btn btn-primary' ng-click='submit()'>Submit</button> -->
+			</div>
 
 
-	<!-- Small modal -->
-
-
-	<!-- 	<button class="btn btn-primary" data-toggle="modal" data-target="#submit" ng-click='submit()'>Submit</button>
-
-		<div class="modal fade" id='submit' role='dialog'>
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		    	<div class='modal-header'>
-		      		<p>Correct!</p>
-		      	</div>
-		      	<div class='modal-body'>
-		      		<button class='btn btn-primary'>Shufle Again</button>
-		      	</div>
-		    </div>
-		  </div>
 		</div>
- -->
 
 
 
@@ -52,4 +31,3 @@
 
 <br>
 <br>
-

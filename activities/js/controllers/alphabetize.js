@@ -3,7 +3,8 @@ angular.module('ActivitiesApp')
 	var randomRotation = function _randomRotation() {
     		return Math.floor(Math.random() * 40 - 20);
     	},
-    wordSeeds = ['Bat', 'Cat', 'Fat', 'Hat', 'Mat', 'Nat', 'Pat', 'Rat', 'Sat', 'Vat'];
+    wordSeeds = ['A', 'B', 'C']
+    //wordSeeds = ['Bat', 'Cat', 'Fat', 'Hat', 'Mat', 'Nat', 'Pat', 'Rat', 'Sat', 'Vat'];
 
 	$scope.words = [];
 
@@ -12,6 +13,7 @@ angular.module('ActivitiesApp')
 	while (i--) {
 		$scope.words.push({
 			text: wordSeeds[i],
+			visibility: 'visible', 
 			rotation: randomRotation(),
 			translateX: randomRotation(),
 			translateY: randomRotation()
@@ -21,6 +23,7 @@ angular.module('ActivitiesApp')
 	$scope.wordStyle = function(word) {
 		return {
 			'-webkit-transform': 'rotate(' + word.rotation + 'deg) translateX(' + word.translateX + 'px) translateY(' + word.translateY + 'px)',
+			'visibility': word.visibility
 		}
 	}
 
@@ -42,7 +45,7 @@ angular.module('ActivitiesApp')
 	$scope.newAlphabetizedList = [];
 
 	$scope.shake = function(word) {
-		jquerySelector = "li:contains('" + word.text + "')"		
+			jquerySelector = "li:contains('" + word.text + "')"		
 			$( jquerySelector ).addClass( "animated shake" );
 		
 		var delay = setTimeout(function(){
@@ -55,20 +58,29 @@ angular.module('ActivitiesApp')
 		var indexOfLowestWord;
 
 		for (var i = 0; i < $scope.words.length; i++) {
-			if (indexOfLowestWord === undefined || $scope.words[i].text < $scope.words[indexOfLowestWord].text) {
+			if ($scope.words[i].visibility === 'visible' && (indexOfLowestWord === undefined || $scope.words[i].text < $scope.words[indexOfLowestWord].text)) {
 				indexOfLowestWord = i;
 			}
 		}
 
 		if (word == $scope.words[indexOfLowestWord]) {
-			$scope.words.splice(indexOfLowestWord,1)
+			
+			$scope.words[indexOfLowestWord].visibility = 'hidden';
 			$scope.newAlphabetizedList.push(word.text)
 		} else {
-			//alert('You got it wrong')
-			//$scope.shake(word)
 			$scope.shake(word)
 		} 
+
+		//FINISHED 
+		//
+		if ($scope.newAlphabetizedList.length === $scope.words.length) {
+    		alert ('Congratulations')
 	}
+
+
+}
+
+
 
 
 
@@ -76,3 +88,6 @@ angular.module('ActivitiesApp')
 
     
 });
+
+
+
