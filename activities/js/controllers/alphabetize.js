@@ -1,5 +1,33 @@
 angular.module('ActivitiesApp')
+
+.directive('modalDialog', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      show: '='
+    },
+    replace: true, // Replace with the template below
+    transclude: true, // we want to insert custom content inside the directive
+    link: function(scope, element, attrs) {
+      scope.dialogStyle = {};
+      if (attrs.width)
+        scope.dialogStyle.width = attrs.width;
+      if (attrs.height)
+        scope.dialogStyle.height = attrs.height;
+      scope.hideModal = function() {
+        scope.show = false;
+      };
+    },
+    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
+  };
+})
+
 .controller('AlphabetizeController', function($scope) {
+	$scope.modalShown = false;
+  	$scope.toggleModal = function() {
+	    $scope.modalShown = !$scope.modalShown;
+	  };
+
 	var randomRotation = function _randomRotation() {
     		return Math.floor(Math.random() * 40 - 20);
     	},
@@ -57,29 +85,28 @@ angular.module('ActivitiesApp')
 	$scope.alphabetize = function(word) {
 		var indexOfLowestWord;
 
-		for (var i = 0; i < $scope.words.length; i++) {
-			if ($scope.words[i].visibility === 'visible' && (indexOfLowestWord === undefined || $scope.words[i].text < $scope.words[indexOfLowestWord].text)) {
-				indexOfLowestWord = i;
+			for (var i = 0; i < $scope.words.length; i++) {
+				if ($scope.words[i].visibility === 'visible' && (indexOfLowestWord === undefined || $scope.words[i].text < $scope.words[indexOfLowestWord].text)) {
+					indexOfLowestWord = i;
+				}
 			}
-		}
 
-		if (word == $scope.words[indexOfLowestWord]) {
-			
-			$scope.words[indexOfLowestWord].visibility = 'hidden';
-			$scope.newAlphabetizedList.push(word.text)
-		} else {
-			$scope.shake(word)
-		} 
+			if (word == $scope.words[indexOfLowestWord]) {
+				
+				$scope.words[indexOfLowestWord].visibility = 'hidden';
+				$scope.newAlphabetizedList.push(word.text)
+			} else {
+				$scope.shake(word)
+			} 
 
-		//FINISHED 
-		//
-		if ($scope.newAlphabetizedList.length === $scope.words.length) {
-    		alert ('Congratulations')
+			//FINISHED 
+			// When the last word is clicked a congratulations modal appears
+			if ($scope.newAlphabetizedList.length === $scope.words.length) {
+	    		$scope.toggleModal()
+			}
+
+
 	}
-
-
-}
-
 
 
 
@@ -87,7 +114,10 @@ angular.module('ActivitiesApp')
 
 
     
-});
+})
+
+
+
 
 
 

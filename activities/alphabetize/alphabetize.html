@@ -5,6 +5,13 @@
 
 		<div>
 
+			<div class="col-md-9" id='randomized-word-list'>
+				<ul>
+					<li class='word-to-alphabetize' ng-click='alphabetize(word)' ng-repeat='word in words' ng-style="wordStyle(word)">{{word.text}}</li>
+				</ul>
+			</div>
+
+
 			<div class="col-md-3" id='newAlphabetizedList'>
 				<ul>
 					<li ng-repeat='word in newAlphabetizedList'>{{word}}</li>
@@ -12,19 +19,31 @@
 			</div>
 
 			
-			<div class="col-md-9" id='randomized-word-list'>
-				<ul>
-				<!-- got this from the jquery website for the sortable function  -->
-					<li class='word-to-alphabetize' ng-click='alphabetize(word)' ng-repeat='word in words' ng-style="wordStyle(word)">{{word.text}}</li>
-
-				</ul>
-
-			</div>
-
+			
 
 		</div>
 
 
+	<!-- THIS MODAL SHOWS WHEN ALL WORDS ARE CHOSEN, YOU CAN CHOOSE TO RESHUFFLE THE LIST AND DO THE ACTIVITY AGAIN, GO TO THE HOME PAGE, OR BACK TO THE ACTIVITIES PAGE TO CHOOSE ANOTHER ACTIVITY -->
+
+		<modal-dialog show='modalShown' width='400px' height='60%'>
+		    <div>
+		    	<p>Congratulations!<p>
+		    </div>
+
+			<div >
+		      	<a class="btn btn-primary" type="button" onClick="window.location.reload()">ReShuffle</a>
+		    </div>
+
+		    <div >
+		    	<a class='btn btn-primary' href="/activities">Activities</a>
+			</div>
+
+		    <div >
+				<a class="btn btn-primary" href="../index.html" role="button">Home</a>
+			</div>
+
+		</modal-dialog>
 
 
 
