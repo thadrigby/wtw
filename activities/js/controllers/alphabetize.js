@@ -22,7 +22,10 @@ angular.module('ActivitiesApp')
   };
 })
 
-.controller('AlphabetizeController', function($scope) {
+.controller('AlphabetizeController', function($scope, $rootScope) {
+	$rootScope.showCurrentActivity = true
+	$('html').addClass('activity-loaded');
+
 	$scope.modalShown = false;
   	$scope.toggleModal = function() {
 	    $scope.modalShown = !$scope.modalShown;

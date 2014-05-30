@@ -13,15 +13,15 @@
 	border: black solid 2px;
 }
 
-.word-study-box {
+.header-box {
 	border: black dashed 2px;
 	text-align: center;
 	width: 100%;
 }
 
 
-/* ALL HOME PAGE OPTIONS TO CLICK ON */
-.home-page-options {
+
+.cut-out-word-style {
 	border: purple dashed 2px;
 	background-color: white;
 	height: 150px;

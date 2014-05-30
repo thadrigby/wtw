@@ -35,6 +35,53 @@
 	display: inline-block;
 }
 
+#header-style {
+	font-size: 32px;
+}
+
+.animate-activity {
+	border: solid yellow 5px;
+}
+
+
+#alphabetize-link {
+	position: absolute;
+	top: 250px;
+	left: 150px;
+	-webkit-transform: rotate(-30deg);
+	width: auto;
+	height: auto;
+	transition: all 2s;
+}
+.activity-loaded #alphabetize-link {
+	top: 0;
+	left: 0;
+	-webkit-transform: rotate(30deg);
+}
+#current-activity {
+	opacity: 0;
+	transition: all 2s;
+}
+.activity-loaded #current-activity{opacity: 1}
+
+
+
+  .current-activity.ng-hide-add, .current-activity.ng-hide-remove {
+    
+    transition:all linear 2.5s;
+    display:block!important;
+  }
+
+  .current-activity.ng-hide-add.ng-hide-add-active,
+  .current-activity.ng-hide-remove {
+    opacity:0;
+  }
+
+  .current-activity.ng-hide-add,
+  .current-activity.ng-hide-remove.ng-hide-remove-active {
+    opacity:1;
+  }
+
 
 
 
