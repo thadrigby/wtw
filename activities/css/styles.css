@@ -47,8 +47,8 @@
 #alphabetize-link {
 	position: absolute;
 	top: 250px;
-	left: 150px;
-	-webkit-transform: rotate(-30deg);
+	left: 100px;
+	-webkit-transform: rotate(0deg);
 	width: auto;
 	height: auto;
 	transition: all 2s;
@@ -56,19 +56,71 @@
 .activity-loaded #alphabetize-link {
 	top: 0;
 	left: 0;
-	-webkit-transform: rotate(30deg);
+	-webkit-transform: rotate(0deg);
 }
+
+#vowel-sounds-link {
+	position: absolute;
+	top: 250px;
+	right: 150px;
+	-webkit-transform: rotate(0deg);
+	width: auto;
+	height: auto;
+	transition: all 2s;
+}
+
+.activity-loaded #vowel-sounds-link {
+	top: 0;
+	right: 0;
+	-webkit-transform: rotate(0deg);
+}
+
+#something-link {
+	position: absolute;
+	bottom: 250px;
+	left: 150px;
+	-webkit-transform: rotate(0deg);
+	width: auto;
+	height: auto;
+	transition: all 2s;
+}
+
+.activity-loaded #something-link {
+	bottom: 0;
+	left: 0;
+	-webkit-transform: rotate(0deg);
+}
+
+#something-else-link {
+	position: absolute;
+	bottom: 250px;
+	right: 150px;
+	-webkit-transform: rotate(0deg);
+	width: auto;
+	height: auto;
+	transition: all 2s;
+}
+
+.activity-loaded #something-else-link {
+	bottom: 0;
+	right: 0;
+	-webkit-transform: rotate(0deg);
+}
+
 #current-activity {
 	opacity: 0;
 	transition: all 2s;
 }
-.activity-loaded #current-activity{opacity: 1}
+
+.activity-loaded #current-activity {
+	opacity: 1
+}
 
 
 
   .current-activity.ng-hide-add, .current-activity.ng-hide-remove {
     
-    transition:all linear 2.5s;
+    transition: all linear 2.5s;
     display:block!important;
   }
 
