@@ -1,7 +1,6 @@
 /* BODY BACKGROUND PICTURE */
 .words-their-way-background {
-	background-image:url("http://www.rainbowresource.com/products/051736b.jpg");
-	background-size: 100%;
+	background-image:url(../images/bg.jpg);
 	text-align: center;
 	margin: 0 auto;
 	min-height: 100%;

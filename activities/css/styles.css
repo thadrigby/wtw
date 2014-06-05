@@ -107,13 +107,15 @@
 	-webkit-transform: rotate(0deg);
 }
 
-#current-activity {
-	opacity: 0;
+.current-activity {
+	
 	transition: all 2s;
+	width: 70%;
+	margin: 0 auto;
 }
 
-.activity-loaded #current-activity {
-	opacity: 1
+.activity-loaded .current-activity {
+	
 }
 
 
