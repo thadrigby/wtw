@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html ng-app='ActivitiesApp'>
 	<head>
-
-	<!-- added from the jquery website for the sortable function -->
 	    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 	    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
@@ -13,42 +11,49 @@
     
     
 
-    <body ng-class="{'activity-loaded': showCurrentActivity}">
+    <body class='words-their-way-background' ng-class="{'activity-loaded': showCurrentActivity}">
 
     	
 		<div class="container">
+
 			<div class='header'>
+
 		    	<br>
 		    		<div class='header-box'>
-		    			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhb9HLXzbm6QB_JtCvlYyJD4XzDwHH6OA0rQOFVDhHniPelSVAg"/>
+		    			<p>Activities</p>
 		    		</div>
 		    	</br>
 		    </div>
-		</div>
-
-		<div>
-			<a id="alphabetize-link" class='cut-out-word-style' href='#/alphabetize'>Alphabetize</a>	
-			<a id='vowel-sounds-link' class='cut-out-word-style' href='#/vowels/sounds'>Vowel Sounds</a>
-			<a id='something-link' class='cut-out-word-style'>Something</a>						
-			<a id='something-else-link' class='cut-out-word-style'>Something Else</a>
-		</div>
-		
-		<div ng-show="showCurrentActivity" class="current-activity">
-			<div ng-view></div>
-		</div>
-
 		
 
-		
 
-		<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-  			
-   			<div class="col-md-12">
-				<a class='btn btn-primary' href="../index.html">Home</a>
-				<a class='btn btn-primary' href="/activities">Activities</a>
+			<div class='main'>
+
+				<a id="alphabetize-link" class='cut-out-word-style' href='#/alphabetize'>Alphabetize</a>	
+				<a id='vowel-sounds-link' class='cut-out-word-style' href='#/vowels/sounds'>Vowel Sounds</a>
+				<a id='something-link' class='cut-out-word-style'>Something</a>						
+				<a id='something-else-link' class='cut-out-word-style'>Something Else</a>
+			
+			
+				<div ng-show="showCurrentActivity" class="current-activity">
+					<div ng-view></div>
+				</div>
 			</div>
-  			
-		</nav>
+
+			
+
+			
+			<div class='footer'>
+
+				<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+		   			<div class="col-md-12">
+						<a class='btn btn-primary' href="../index.html">Home</a>
+						<a class='btn btn-primary' href="/activities">Activities</a>
+					</div>
+				</nav>
+			</div>
+
+		</div>
 
 
 
