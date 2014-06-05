@@ -1,3 +1,8 @@
+.activity-main {
+	border: solid yellow 2px;
+	overflow: auto;
+}
+
 #randomized-word-list { 
 	border: solid black 2px;
 	list-style-type: none; 
@@ -45,9 +50,10 @@
 
 
 #alphabetize-link {
-	position: absolute;
-	top: 250px;
-	left: 100px;
+	display: block;
+	/*position: absolute;*/
+	/*top: 250px;
+	left: 100px;*/
 	-webkit-transform: rotate(0deg);
 	width: auto;
 	height: auto;
@@ -60,7 +66,8 @@
 }
 
 #vowel-sounds-link {
-	position: absolute;
+	display: block;
+	/*position: absolute;*/
 	top: 250px;
 	right: 150px;
 	-webkit-transform: rotate(0deg);
@@ -76,7 +83,8 @@
 }
 
 #something-link {
-	position: absolute;
+	display: block;
+	/*position: absolute;*/
 	bottom: 250px;
 	left: 150px;
 	-webkit-transform: rotate(0deg);
@@ -92,7 +100,8 @@
 }
 
 #something-else-link {
-	position: absolute;
+	display: block;
+	/*position: absolute;*/
 	bottom: 250px;
 	right: 150px;
 	-webkit-transform: rotate(0deg);
@@ -108,10 +117,11 @@
 }
 
 .current-activity {
-	
+	position: relative;
 	transition: all 2s;
 	width: 70%;
-	margin: 0 auto;
+	margin: 100px auto;
+	overflow: auto;
 }
 
 .activity-loaded .current-activity {
