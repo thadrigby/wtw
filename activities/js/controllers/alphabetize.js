@@ -26,6 +26,7 @@ angular.module('ActivitiesApp')
 	$rootScope.showCurrentActivity = true
 	$('html').addClass('activity-loaded');
 
+
 	$scope.modalShown = false;
   	$scope.toggleModal = function() {
 	    $scope.modalShown = !$scope.modalShown;
@@ -81,7 +82,7 @@ angular.module('ActivitiesApp')
 		
 		var delay = setTimeout(function(){
 	        $(jquerySelector).removeClass("animated shake");
-	     }, 800)
+	     }, 300)
 	
 	}
 

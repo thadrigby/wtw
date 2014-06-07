@@ -5,14 +5,14 @@
 
 		<div>
 
-			<div class="col-md-9" id='randomized-word-list'>
+			<div class="col-md-8" id='randomized-word-list'>
 				<ul>
 					<li class='word-to-alphabetize' ng-click='alphabetize(word)' ng-repeat='word in words' ng-style="wordStyle(word)">{{word.text}}</li>
 				</ul>
 			</div>
 
 
-			<div class="col-md-3" id='newAlphabetizedList'>
+			<div class="col-md-4" id='newAlphabetizedList'>
 				<ul>
 					<li ng-repeat='word in newAlphabetizedList'>{{word}}</li>
 				</ul>
