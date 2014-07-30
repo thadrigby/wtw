@@ -47,6 +47,8 @@ table {
 	border-spacing: 0;
 }
 
+
+
 .activity-loaded body {
 	height: 100%;
 }
@@ -57,11 +59,10 @@ table {
 	/*height: 800px;*/
 	border: red solid 2px;
 	overflow: auto;
-	
 }
 
 .activity-main {
-	/*border-top: solid black 2px;*/
+	border-top: solid black 2px;
 	overflow: auto;
 	/*height: 350px;*/
 }
@@ -71,7 +72,6 @@ table {
 	list-style-type: none; 
 	margin: 0; padding: 0; 
 	height: 200px;
-
 }
 
 #randomized-word-list li {
@@ -102,9 +102,23 @@ table {
 	display: inline-block;
 }
 
-#header-style {
-	font-size: 32px;
+#header-box {
+	border: black 3px;
+	border-style: double;
+	border-color: purple;
+	text-align: center;
+	width: 30%;
+	margin: 0 auto;
+	height: 200px;
+	font-family: comic sans ms;
+	font-size: 50px;
+	background-color: white;
+	color: purple;
 }
+
+/*#header-box {
+	border: red solid 2px;
+}*/
 
 .animate-activity {
 	border: solid yellow 5px;
@@ -140,11 +154,21 @@ table {
 
 #alphabetize-link {
 	display: inline-block;
-	-webkit-transform: rotate(0deg);
-	width: 180px;
-	height: 150px;
+	-webkit-transform: rotate(-7deg);
 	transition: all 2s;
-	margin: 20px 20px 20px 20px;
+	margin-left: 115px;
+	margin-top: 10px;
+}
+
+#abc {
+	border: purple dashed 2px;
+	background-color: white;
+	height: 170px;
+	width: 250px;/*
+	vertical-align: middle;*/
+	margin-left: 0px;
+	margin-top: 20px;
+	-webkit-transform: rotate(3deg);
 }
 
 .activity-loaded #alphabetize-link {
@@ -157,11 +181,22 @@ table {
 	display: inline-block;/*
 	top: 250px;
 	right: 150px;*/
-	-webkit-transform: rotate(0deg);
+	-webkit-transform: rotate(8deg);
 	width: 180px;
 	height: 150px;
-	transition: all 2s;
-	margin: 20px 20px 20px 20px;
+	transition: all 2s;/*
+	margin-right: 300px;*/
+}
+
+#vowel-pic {
+	border: purple dashed 2px;
+	background-color: white;
+	height: 120px;
+	width: 250px;
+	vertical-align: middle;
+	margin-left: 100px;
+	margin-top: 25px;
+	-webkit-transform: rotate(-13deg);
 }
 
 .activity-loaded #vowel-sounds-link {
@@ -173,7 +208,7 @@ table {
 	display: inline-block;
 	/*bottom: 250px;
 	left: 150px;*/
-	-webkit-transform: rotate(0deg);
+	-webkit-transform: rotate(19deg);
 	width: 180px;
 	height: 150px;
 	transition: all 2s;
@@ -189,7 +224,7 @@ table {
 	display: inline-block;
 /*	bottom: 250px;
 	right: 150px;*/
-	-webkit-transform: rotate(0deg);
+	-webkit-transform: rotate(-3deg);
 	width: 180px;
 	height: 150px;
 	transition: all 2s;

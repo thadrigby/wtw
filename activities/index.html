@@ -16,9 +16,9 @@
     	
 		<div class="container">
 
-			<div class='header wtw-collapse' ng-hide='showCurrentActivity'>
+			<div class='header wtw-collapse' id='header' ng-hide='showCurrentActivity'>
 		    	<br>
-		    		<div class='header-box wtw-collapse' ng-hide='showCurrentActivity'>
+		    		<div class='header-box wtw-collapse' id='header-box' ng-hide='showCurrentActivity'>
 		    			<p>Activities</p>
 		    		</div>
 		    	</br>
@@ -27,12 +27,46 @@
 
 
 			<div class='activity-main'>
-				<div>
-					<a id="alphabetize-link" class='cut-out-word-style' href='#/alphabetize'>Alphabetize</a>	
-					<a id='vowel-sounds-link' class='cut-out-word-style' href='#/vowels/sounds'>Vowel Sounds</a>
-					<a id='something-link' class='cut-out-word-style'>Something</a>						
-					<a id='something-else-link' class='cut-out-word-style'>Something Else</a>
-				</div>
+				
+
+
+				<div class="col-md-6" id='left-side'>
+          			<div class="col-md-3" id='inside-left-side'>
+           				<a id="alphabetize-link" class='cut-out-word-style' href='#/alphabetize'>Alphabetize</a>
+          			</div>
+          			<div class="col-md-3" id='inside-left-side'>
+            			<div class='margins'>
+            				<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQezLddDzEg8T_70TMsOCQk977-Qb318Am__6kxl3C7nZG9_UYR9A" id='abc'>
+            			</div>
+          			</div>
+          			<div class="col-md-3" id='inside-left-side'>
+            			<div class='margins'>
+            				<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTSJzfRUOLDr1n0gZvYrY_fR1Q2TY0L-MtvqyWhmievXnXgqKh6cQ" id='vowel-pic'>
+            			</div>
+          			</div>
+          			<div class="col-md-3" id='inside-left-side'>
+              			<a id='vowel-sounds-link' class='cut-out-word-style' href='#/vowels/sounds'>Vowel Sounds</a>
+          			</div>
+
+
+
+        		</div>
+
+        		<div class="col-md-6" id='right-side'> 
+          			<div class="col-md-3" id='inside-right-side'> 
+              				<a id='something-link' class='cut-out-word-style'>Something</a>
+          			</div>
+          			<div class="col-md-3" id='inside-right-side'>
+            			
+          			</div>
+          			<div class="col-md-3" id='inside-right-side'>
+            			
+          			</div>
+			        <div class="col-md-3" id='inside-right-side'>
+			            <a id='something-else-link' class='cut-out-word-style'>Something Else</a>
+			        </div>
+        	</div>
+
 			
 				<div ng-show="showCurrentActivity" class="current-activity">
 					<div ng-view></div>

@@ -98,7 +98,8 @@ angular.module('ActivitiesApp')
 			if (word == $scope.words[indexOfLowestWord]) {
 				
 				$scope.words[indexOfLowestWord].visibility = 'hidden';
-				$scope.newAlphabetizedList.push(word.text)
+				// THIS WOULD ADD IT TO THE ARRAY newAlphabetizedList
+				// $scope.newAlphabetizedList.push(word.text)
 			} else {
 				$scope.shake(word)
 			} 
