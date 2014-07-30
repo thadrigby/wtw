@@ -85,10 +85,10 @@
 	-webkit-transform: rotate(-8deg);
 }
 
-/*.margins {
+.margins {
 	margin: 6px;
-	border: yellow solid 5px;
-}*/
+/*	border: yellow solid 5px;
+*/}
 
 #login {/*
 	margin: 0 auto;*/
@@ -134,7 +134,7 @@
 
 #activities {
 	margin: 0 auto;
-/*	margin-top: 110px;
+	margin-top: 10px;/*
 	margin-bottom: 132px;*/
 	-webkit-transform: rotate(-8deg);
 }

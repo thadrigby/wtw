@@ -144,9 +144,46 @@ table {
   }
 
 
+/* ACTIVITY PAGE LAYOUT */
+
+.activity-margins {
+	margin: 6px;
+/*	border: yellow solid 2px;
+*/}
+
+/*This is the left side box*/
+#activity-left-side {
+	margin-top: 5px;
+	width: 50%;
+/*	border: blue solid 2px;
+*/	height: 350px;
+}
+
+#activity-inside-left-side {
+/*	border: solid red 2px;
+*/	width: 50%;
+	height: 50%;
+}
+
+/* This is the right side box */
+#activity-right-side {
+	margin-top: 5px;
+	width: 50%;
+/*	border: blue solid 2px;
+*/	height: 350px;
+}
+
+#activity-inside-right-side {
+/*	border: solid red 2px;
+*/	width: 50%;
+	height: 50%;
+}
+
+
+
 
  .activity-loaded .header {
- 	transition: all linear 1.5s;
+ 	transition: all linear 0s;
  	margin: 0px;/*
  	height: 10px;*/
  	/*width: 0px;*/
@@ -156,17 +193,17 @@ table {
 	display: inline-block;
 	-webkit-transform: rotate(-7deg);
 	transition: all 2s;
-	margin-left: 115px;
+	margin-left: 100px;
 	margin-top: 10px;
 }
 
 #abc {
 	border: purple dashed 2px;
 	background-color: white;
-	height: 170px;
-	width: 250px;/*
-	vertical-align: middle;*/
-	margin-left: 0px;
+	height: 200px;
+	width: 225px;
+	vertical-align: bottom;
+	margin-left: 150px;
 	margin-top: 20px;
 	-webkit-transform: rotate(3deg);
 }
@@ -175,6 +212,10 @@ table {
 	-webkit-transform: rotate(0deg);
 	margin: 0px 50px 0px 50px;
 
+}
+
+.activity-loaded #abc {
+	visibility: hidden;
 }
 
 #vowel-sounds-link {
@@ -191,10 +232,10 @@ table {
 #vowel-pic {
 	border: purple dashed 2px;
 	background-color: white;
-	height: 120px;
+	height: 100px;
 	width: 250px;
 	vertical-align: middle;
-	margin-left: 100px;
+	margin-left: 50px;
 	margin-top: 25px;
 	-webkit-transform: rotate(-13deg);
 }
@@ -204,7 +245,11 @@ table {
 	margin: 0px 50px 0px 50px;
 }
 
-#something-link {
+.activity-loaded #vowel-pic {
+	visibility: hidden;
+}
+
+#syllables-link {
 	display: inline-block;
 	/*bottom: 250px;
 	left: 150px;*/
@@ -212,15 +257,31 @@ table {
 	width: 180px;
 	height: 150px;
 	transition: all 2s;
-	margin: 20px 20px 20px 20px;
+	margin: 10px 0px 0px 0px;
 }
 
-.activity-loaded #something-link {
+#syllable-pic {
+	border: purple dashed 2px;
+	background-color: white;
+	height: 150px;
+	width: 300px;
+	vertical-align: middle;
+	margin-left: 0px;
+	margin-top: 65px;
+	-webkit-transform: rotate(-18deg);
+	position: absolute;
+}
+
+.activity-loaded #syllables-link {
 	-webkit-transform: rotate(0deg);
 	margin: 0px 50px 0px 50px;
 }
 
-#something-else-link {
+.activity-loaded #syllable-pic {
+	visibility: hidden;
+}
+
+#spelling-link {
 	display: inline-block;
 /*	bottom: 250px;
 	right: 150px;*/
@@ -228,10 +289,10 @@ table {
 	width: 180px;
 	height: 150px;
 	transition: all 2s;
-	margin: 20px 20px 20px 20px;
+	margin: 0;
 }
 
-.activity-loaded #something-else-link {
+.activity-loaded #spelling-link {
 	-webkit-transform: rotate(0deg);
 	margin: 0px 50px 0px 50px;
 }
