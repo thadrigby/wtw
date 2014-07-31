@@ -35,7 +35,7 @@ angular.module('ActivitiesApp')
 	var randomRotation = function _randomRotation() {
     		return Math.floor(Math.random() * 40 - 20);
     	},
-    wordSeeds = ['A', 'B', 'C']
+    wordSeeds = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
     //wordSeeds = ['Bat', 'Cat', 'Fat', 'Hat', 'Mat', 'Nat', 'Pat', 'Rat', 'Sat', 'Vat'];
 
 	$scope.words = [];
